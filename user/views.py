@@ -11,14 +11,12 @@ from django.template import Context
 from django.contrib.auth.models import User
 from datetime import datetime
 from django.urls import reverse
-import pyttsx3
 from .models import *
 from django.shortcuts import get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.conf import settings
 #################### index#######################################
 
-engine = pyttsx3.init()
 
 def index(request):
 	return render(request, 'user/index.html', {'title':'index'})
